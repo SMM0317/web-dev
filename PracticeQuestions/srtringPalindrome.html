@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function isPalindrome(str) {
+      debugger
+      // Remove non-alphanumeric characters and convert to lowercase
+      str = str.replace(/[\W_]/g, "").toLowerCase();
+    
+      // Compare the original string with its reverse
+      return str === str.split("").reverse().join("");
+    }
+  
+    function checkPalindrome() {
+      const inputValue = document.getElementById('search').value;
+      const result = isPalindrome(inputValue);
+      const outputDiv = document.getElementById('output');
+      
+      if (result) {
+        outputDiv.textContent = 'It is a palindrome!';
+      } else {
+        outputDiv.textContent = 'It is not a palindrome!';
+      }
+    }
+  </script>
+  <input type="text" placeholder="enter value" id="search">
+  <button onclick="checkPalindrome()">Check</button>
+  <div id="output"></div>
+</body>
+</html>
+
+
+<!-- The checkPalindrome function is called when the button is clicked. It retrieves the input value, checks if it's a palindrome using the isPalindrome function, and updates the content of the output div to display the result.
+
+The result is shown in the <div id="output"></div>, so we can see the output on the screen. -->
