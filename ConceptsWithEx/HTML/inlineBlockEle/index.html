@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inline and Block Elements - HTML</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <p>Hey I am a para</p>
+    <a href="https://google.com">Google</a>
+    <div>I am a block element</div>
+    <span>I am span and I am inline</span>
+    <a href="">yes he is inline</a>
+
+    <!-- Quick Quiz:
+    Without using br tag, write a vertically aligned form asking for name, city and pincode of a user. -->
+
+    <!-- The question is asking that without using br tag we have to vertically align distinct inputs.
+ For Name, city and pincode ...we will use 3 different types of input and make a seperate div ( block level element ) for each of them.
+
+Main code -  -->
+
+    <form action="#">
+      <div>
+        <input
+          type="text"
+          name="username"
+          id="xyz"
+          placeholder="Enter your name"
+        />
+      </div>
+
+      <div>
+        <label for="city">Name of City:</label>
+        <input
+          type="text"
+          name="city"
+          placeholder=" Enter your City "
+          id="city"
+        />
+      </div>
+      <div>
+        <label for=" pincode"> Pincode</label>
+        <input type=" number" id=" pincode " />
+      </div>
+    </form>
+  </body>
+</html>
