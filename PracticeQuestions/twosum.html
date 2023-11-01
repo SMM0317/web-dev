@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /**
+       * @param {number[]} nums
+       * @param {number} target
+       * @return {number[]}
+       */
+      //   var twoSum = function (nums, target) {
+      //     debugger;
+      //     for (nums; nums++; nums.length + 1) {
+      //       nums[i] + nums[i + 1] === target;
+      //       return [i, i + 1];
+      //     }
+      //   };
+
+      //   twoSum([2, 7, 11, 15], 9); // Example usage:
+      //   const result = twoSum([2, 7, 11, 15], 9);
+      //   console.log(result); // This will also print [0, 1].
+
+      // Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+      // You may assume that each input would have exactly one solution, and you may not use the same element twice.
+      // You can return the answer in any order.
+      var twoSum = function (nums, target) {
+        for (let i = 0; i < nums.length; i++) {
+          for (let j = i + 1; i < nums.length; i++) {
+            if (nums[i] + nums[j] === target) {
+              return [i, j];
+            }
+          }
+        }
+        return [];
+      };
+
+      // Example usage:
+      const result = twoSum([2, 5, 11, 7], 9);
+      console.log(result);
+    </script>
+  </body>
+</html>
